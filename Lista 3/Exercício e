@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void) {
+  int a;
+  printf("Escreva um algoritmo de 1 a 7\n");
+  scanf("%i",&a);
+    switch (a){
+      case 1:
+      printf("Segunda");
+      break;
+      case 2:
+      printf("Terça");
+      break;
+      case 3:
+      printf("Quarta");
+      break;
+      case 4:
+      printf("Quinta");
+      break;
+      case 5:
+      printf("Sexta");
+      break;
+      case 6:
+      printf("Sábado");
+      break;
+      case 7:
+      printf("Domingo");
+      break;
+    }
+  return 0;
+}
