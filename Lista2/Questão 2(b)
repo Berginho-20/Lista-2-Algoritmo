@@ -8,6 +8,6 @@ int main(void) {
   num2 = num1;
   num1 = num1 + num2;
   printf("num1 = %d e num2 = %d \n", num1, num2);
-  //Imprime (Número mágico 0 num1 = -6 e num2 = -3 )
+  //Imprime (Número mágico 0; num1 = -6 e num2 = -3 )
 return 0;
 }
