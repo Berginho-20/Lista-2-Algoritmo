@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int a, b;
+  printf("Digite um número inteiro qualquer\n");
+  scanf("%i", &a);
+  printf("Digite outro número inteiro qualquer\n");
+  scanf("%i", &b);
+  if (a % b == 0)
+    printf("O primeiro valor é divisível pelo segundo");
+  else 
+    printf("O primeiro valor não é divisível pelo segundo");
+  return 0;
+}
