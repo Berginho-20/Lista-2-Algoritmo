@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void) {
+  float a, div, sub, d, b, c;
+  float fa, fb, fc, fd;
+  printf("\n Digite um número: ");
+  scanf("%f", &a);
+  printf("\n Digite outro número maior que o primeiro: ");
+  scanf("%f", &d);
+  if (d > a) {
+  sub = d - a;
+  div = sub/3;
+  b = a + div;
+  c = d - div;
+  fa = (3*a+1)/2;
+  fb = (3*b+1)/2;
+  fc = (3*c+1)/2;
+  fd = (3*d+1)/2;
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(a) é: %.2f", fa);
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(b) é: %.2f", fb);
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(c) é: %.2f", fc);
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(d) é: %.2f", fd);}
+  else if (a > d){
+  sub = a - d;
+  div = sub/3;
+  b = a + div;
+  c = d - div;
+  fa = (3*a+1)/2;
+  fb = (3*b+1)/2;
+  fc = (3*c+1)/2;
+  fd = (3*d+1)/2;
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(a) é: %.2f", fa);
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(b) é: %.2f", fb);
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(c) é: %.2f", fc);
+  printf("\n Na função f(x)= (3x +1)/2, o resultado para f(d) é: %.2f", fd);}
+return 0;
+}
