@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+  int num, resto, x;
+  
+  printf("Escreva um número\n"); 
+  scanf("%d", &num);
+  resto = num % 2;
+   x = (float) num;
+  
+  if (resto == 0 && x > 0){
+    printf("O número escrito é par e positivo");
+  }
+  
+  else if (resto != 0 && x > 0){
+    printf("O número escrito é impar e positivo");
+}
+  
+  else if (resto == 0 && x < 0){
+    printf("O número escrito é par e negativo");
+}
+  
+  else if (resto != 1 && x < 0){
+    printf("O número escrito é impar e negativo");
+}
+
+  return 0;
+}
