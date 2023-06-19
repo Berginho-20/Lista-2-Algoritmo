@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+
+  int dist;
+  int tempo;
+  int velocidade;
+  printf("\nDigite a distância percorrida em metros: ");
+  scanf("%i", &dist);
+  printf("\nDigite o tempo gasto em segundos: ");
+  scanf("%i", &tempo);
+  velocidade = dist/tempo;
+  printf("\nA velocidade média do trajeto foi de: %i m/s", velocidade);
+ return 0;
+}
