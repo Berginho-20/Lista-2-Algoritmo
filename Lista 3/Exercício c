@@ -1,0 +1,36 @@
+// Carregando bibliotecas
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  printf("\t\tExercício 1: c)\n");
+	  printf("\tVerifiando se é consoante/vogal\n");
+
+	char letra;
+	
+  // Printando pergunta
+  printf("\fDigite uma letra: ");
+  scanf("%c", &letra);
+
+  if (('a' <= letra && letra <= 'z') ||
+      ('A' <= letra && letra <= 'Z')) { // se não for letra, nem testo
+    switch (letra) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+    case 'A':
+    case 'E':
+    case 'I':
+    case 'O':
+    case 'U':
+      printf("Você digitou uma \"vogal\"\n");
+      break;
+    default: // Se for != das letras cima
+      printf("Você digitou uma \"consoante\"\n");
+    }
+  }
+
+  return 0;
+}
