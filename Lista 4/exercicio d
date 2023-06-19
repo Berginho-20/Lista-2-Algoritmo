@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+  float pao, broa, conta, porc, junt1, junt2;
+  printf("Quantos pães foram vendidos?\n");
+  scanf("%f", &pao);
+  printf("Quantos broas foram vendidas?\n");
+  scanf("%f", &broa);
+  junt1 = pao * 0.12;
+  junt2 = broa * 1.5;
+  conta = junt1 + junt2;
+  porc = conta * 0.1;
+  printf("O lucro do dia foi de %.2f reais, e deve guardar %.2f reais na poupança!", conta, porc);
+  return 0;
+}
