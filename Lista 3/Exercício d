@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  float a, b, c;
+  printf("Escreva três números quaisquer:\n");
+  scanf("%f",&a);
+  scanf("%f",&b);
+  scanf("%f",&c);
+  if (a > b && a > c)
+    printf("O '%.1f' é o maior número\n",a);
+  else if (b > a && b > c)
+    printf("O '%.1f' é o maior número\n",b);
+  else if (c > a && c > b)
+    printf("O '%.1f' é o maior número\n",c);
+  if (a < b && a < c)
+    printf("O '%.1f' é o menor número\n",a);
+  else if (b < a && b < c)
+    printf("O '%.1f' é o menor número\n",b);
+  else if (c < a && c < b)
+    printf("O '%.1f' é o menor número\n",c);
+return 0;
+}
