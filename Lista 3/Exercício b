@@ -1,0 +1,16 @@
+// Carregando Bibliotecas
+#include <stdio.h>
+
+int main(void) {
+	//
+  int valor, div;
+  printf("Escreva um número\n");
+  scanf("%i",&valor);
+  div = valor % 2;
+  
+  if (div == 0)
+    printf("Seu número é par\n");
+  else
+    printf("Seu número é impar\n");
+  return 0;
+}
