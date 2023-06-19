@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main(void) {
+
+  char nome[50];
+
+  float notal, nota2, nota3, falta, freq, media;
+
+  printf("Escreva o nome do aluno\n"); 
+  scanf("%s", &nome);
+
+  printf("Escreva a 1ª nota\n");
+  scanf("%f",&notal);
+
+  printf("Escreva a 2ª nota\n");
+  scanf("%f",&nota2);
+  
+  printf("Escreva a 3ª nota\n");
+  scanf("%f",&nota3);
+
+  printf("Escreva quantas vezes o aluno faltou\n"); 
+  scanf("%f", &falta);
+
+  media= (notal + nota2+ nota3)/3;
+
+  freq = (falta * 80)/100;
+
+  if (media >= 7 && freq <= 20){
+    printf("O aluno %s foi aprovado com média %f e %f  de frequência!", nome, media, freq);
+  }
+  
+  else if (media >= 7 && freq > 20){
+  printf("O aluno %s foi reprovado por falta com média %f e %f  de frequência!", nome, media, freq);
+}
+  
+  else if (media < 7 && freq <= 20){
+  printf("O aluno %s foi reprovado por nota com média %f e %f  de frequência!", nome, media, freq);
+}
+  
+  else if (media < 7 && freq > 20){
+  printf("O aluno %s foi reprovado por nota e por falta com média %f e  %f de frequêncial", nome, media, freq);
+}
+
+return 0;
+}
