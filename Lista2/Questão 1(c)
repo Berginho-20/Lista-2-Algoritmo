@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+int pao;
+  int emp;
+  float qtdpao;
+  float qtdemp;
+  float juntos;
+  float guardar;
+  printf("\n Digite quantos paes foram vendidos: ");
+  scanf("%f", &pao);
+  printf("\n Digite quantas empadas foram vendidas: ");
+  scanf("%f", &emp);
+  qtdpao = pao * 0.15;
+  qtdemp = emp * 2.50;
+  juntos = qtdpao + qtdemp;
+  guardar = (juntos * 15)/100;
+  printf("\n Quanto arrecadou com a venda dos pães e empadas: %.2f ", juntos);
+  printf("\n Quanto deve guardar numa conta de poupança: %.2f ", guardar);
+return 0;
+}
