@@ -1,1 +1,13 @@
+#include <stdio.h>
 
+int main(void) {
+  int num1, num2=3;
+
+  num1 = -3;
+  printf("Número mágico %d \n", num1 + num2);
+  num2 = num1;
+  num1 = num1 + num2;
+  printf("num1 = %d e num2 = %d \n", num1, num2);
+  //Imprime (Número mágico 0 num1 = -6 e num2 = -3 )
+return 0;
+}
