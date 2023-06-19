@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+  int a, b, c;
+  int r, s, d;
+  printf("\n Digite um número: ");
+  scanf("%i", &a);
+  printf("\n Digite mais um número: ");
+  scanf("%i", &b);
+  printf("\n Digite outro número: ");
+  scanf("%i", &c);
+  r = (a + b) * (a + b);
+  s = (b + c) * (b + c);
+  d = (r + s)/2;
+  printf("\nO resultado da expressão é: %i", d);
+return 0;
+}
