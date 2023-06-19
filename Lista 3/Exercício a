@@ -1,0 +1,27 @@
+// Carregando bibliotecas
+#include <stdio.h>
+
+int main(void) {
+  printf("\t\tExercício 1: a)\n");
+	  printf("\tVerificador de números\n");
+
+  // Criando variáveis
+  float A;
+
+  // Printando pergunta
+  printf("\fDigite um número: ");
+  scanf("%f", &A);
+
+  // Condição
+  if (A > 0) {
+    printf("\n\fVocê digitou %.2f", A);
+    printf("\nSeu número positivo!");
+  } else if (A < 0) {
+    printf("\n\fVocê digitou %.2f", A);
+    printf("\nSeu número Negativo!");
+  } else if (A == 0) {
+    printf("\nSeu número é zero!");
+  }
+
+  return 0;
+}
