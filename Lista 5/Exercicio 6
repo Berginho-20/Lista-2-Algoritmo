@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+  float a, b, c;
+  printf("Informe 3 valores:\n");
+  scanf("%f", &a);
+  scanf("%f", &b);
+  scanf("%f", &c);
+  if (a < 0 || b < 0 || c < 0){
+    printf("Um dos valores é inválido");
+  } else {
+    if (a == b && a == c){
+      printf("O triângulo é um equilátero");
+    }else if(a == b || a == c || b == c){
+      printf("O triângulo é um isósceles");
+    } else{
+      printf("O triângulo é escaleno");
+    }
+  }
+  return 0;
+}
