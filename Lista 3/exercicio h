@@ -1,0 +1,232 @@
+// Carregando bibliotecas
+#include <stdio.h>
+
+// Código de erro
+int error(void) {
+  printf("\nVocê digitou algum valor de forma incorreta! Tente novamente.\n");
+  // Variáveis importantes
+  int dia, mes, ano, Div1, Div2;
+
+  // Perguntas
+  printf("\fDigite um dia: ");
+  scanf("%d", &dia);
+  if (dia <= 0 && dia <= 31) { // Verificando se a resposta é < 0
+    error();
+  }
+  printf("\nDigite um mês: ");
+  scanf("%d", &mes);
+  if (mes <= 0 && mes <= 12) { // Verificando se a resposta é < 0
+    error();
+  }
+  printf("\nDigite um ano: ");
+  scanf("%d", &ano);
+  if (ano <= 0 && ano <= 9999) { // Verificando se a resposta é < 0
+    error();
+  }
+
+  // Printando no formato dia/mes/ano
+  if (dia <= 31 && mes <= 12 && ano > 0) {
+    if (dia <= 9 && mes <= 9) {
+      printf("\nO dia digitado foi: 0%d/0%d/%d\n", dia, mes,
+             ano); // 0dia/0mes/ano
+    } else if (dia > 9 && mes <= 9) {
+      printf("\nO dia digitado foi: %d/0%d/%d\n", dia, mes,
+             ano); // dia/0mes/ano
+    } else if (dia <= 9 && mes > 9) {
+      printf("\nO dia digitado foi: 0%d/%d/%d\n", dia, mes,
+             ano); // 0dia/mes/ano
+    } else {
+      printf("\nO dia digitado foi: %d/%d/%d\n", dia, mes, ano); // dia/mes/ano
+    }
+    // Printando no formato dia de mes de ano
+    switch (mes) {
+    case 1:
+      printf("Dia %d de janeiro de %d", dia, ano);
+      break;
+    case 2:
+      Div1 = ano % 4;
+      Div2 = ano % 100;
+      if (dia >= 29) {
+        if (Div1 == 0 || Div2 == 0) {
+          if (dia == 29) {
+            printf("Dia %d de fevereiro de %d", dia, ano);
+          }
+        } else {
+          printf("Fevereiro não tem este dia");
+        }
+      } else if (dia < 29) {
+        printf("Dia %d de fevereiro de %d", dia, ano);
+      } else {
+        printf("Fevereiro não tem este dia");
+      }
+      break;
+    case 3:
+      printf("Dia %d de março de %d", dia, ano);
+      break;
+    case 4:
+      if (dia < 31) {
+        printf("Dia %d de abril de %d", dia, ano);
+      } else {
+        printf("Abril não tem este dia");
+      }
+      break;
+    case 5:
+      printf("Dia %d de maio de %d", dia, ano);
+      break;
+    case 6:
+      if (dia < 31) {
+        printf("Dia %d de junho de %d", dia, ano);
+      } else {
+        printf("Junho não tem este dia");
+      }
+      break;
+    case 7:
+      printf("Dia %d de julho de %d", dia, ano);
+      break;
+    case 8:
+      printf("Dia %d de agosto de %d", dia, ano);
+      break;
+    case 9:
+      if (dia < 31) {
+        printf("Dia %d de setembro de %d", dia, ano);
+      } else {
+        printf("Setembro não tem este dia");
+      }
+      break;
+    case 10:
+      printf("Dia %d de outubro de %d", dia, ano);
+      break;
+    case 11:
+      if (dia < 31) {
+        printf("Dia %d de novembro de %d", dia, ano);
+      } else {
+        printf("Novembro não tem este dia");
+      }
+      break;
+    case 12:
+      printf("Dia %d de dezembro de %d", dia, ano);
+      break;
+    }
+
+  } else {
+    printf("\nVocê digitou algo errado! Verifique o dia, mês ou ano digitado.");
+  }
+
+  return 0;
+}
+
+// Código principal
+int main(void) {
+  printf("\t\tExercício 1: h)\n");
+  printf("\tVerificador de datas\n");
+
+  // Variáveis importantes
+  int dia, mes, ano, Div1, Div2;
+
+  // Perguntas
+  printf("\fDigite um dia: ");
+  scanf("%d", &dia);
+  if (dia <= 0 && dia <= 31) { // Verificando se a resposta é < 0
+    error();
+  }
+  printf("\nDigite um mês: ");
+  scanf("%d", &mes);
+  if (mes <= 0 && mes <= 12) { // Verificando se a resposta é < 0
+    error();
+  }
+  printf("\nDigite um ano: ");
+  scanf("%d", &ano);
+  if (ano <= 0 && ano <= 9999) { // Verificando se a resposta é < 0
+    error();
+  }
+
+  // Printando no formato dia/mes/ano
+  if (dia <= 31 && mes <= 12 && ano > 0) {
+    if (dia <= 9 && mes <= 9) {
+      printf("\nO dia digitado foi: 0%d/0%d/%d\n", dia, mes,
+             ano); // 0dia/0mes/ano
+    } else if (dia > 9 && mes <= 9) {
+      printf("\nO dia digitado foi: %d/0%d/%d\n", dia, mes,
+             ano); // dia/0mes/ano
+    } else if (dia <= 9 && mes > 9) {
+      printf("\nO dia digitado foi: 0%d/%d/%d\n", dia, mes,
+             ano); // 0dia/mes/ano
+    } else {
+      printf("\nO dia digitado foi: %d/%d/%d\n", dia, mes, ano); // dia/mes/ano
+    }
+    // Printando no formato dia de mes de ano
+    switch (mes) {
+    case 1:
+      printf("Dia %d de janeiro de %d", dia, ano);
+      break;
+    case 2:
+      Div1 = ano % 4;
+      Div2 = ano % 100;
+      if (dia >= 29) {
+        if (Div1 == 0 || Div2 == 0) {
+          if (dia == 29) {
+            printf("Dia %d de fevereiro de %d", dia, ano);
+          }
+        } else {
+          printf("Fevereiro não tem este dia");
+        }
+      } else if (dia < 29) {
+        printf("Dia %d de fevereiro de %d", dia, ano);
+      } else {
+        printf("Fevereiro não tem este dia");
+      }
+      break;
+    case 3:
+      printf("Dia %d de março de %d", dia, ano);
+      break;
+    case 4:
+      if (dia < 31) {
+        printf("Dia %d de abril de %d", dia, ano);
+      } else {
+        printf("Abril não tem este dia");
+      }
+      break;
+    case 5:
+      printf("Dia %d de maio de %d", dia, ano);
+      break;
+    case 6:
+      if (dia < 31) {
+        printf("Dia %d de junho de %d", dia, ano);
+      } else {
+        printf("Junho não tem este dia");
+      }
+      break;
+    case 7:
+      printf("Dia %d de julho de %d", dia, ano);
+      break;
+    case 8:
+      printf("Dia %d de agosto de %d", dia, ano);
+      break;
+    case 9:
+      if (dia < 31) {
+        printf("Dia %d de setembro de %d", dia, ano);
+      } else {
+        printf("Setembro não tem este dia");
+      }
+      break;
+    case 10:
+      printf("Dia %d de outubro de %d", dia, ano);
+      break;
+    case 11:
+      if (dia < 31) {
+        printf("Dia %d de novembro de %d", dia, ano);
+      } else {
+        printf("Novembro não tem este dia");
+      }
+      break;
+    case 12:
+      printf("Dia %d de dezembro de %d", dia, ano);
+      break;
+    }
+
+  } else {
+    printf("\nVocê digitou algo errado! Verifique o dia, mês ou ano digitado.");
+  }
+
+  return 0;
+}
