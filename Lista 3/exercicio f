@@ -1,0 +1,136 @@
+// Carregando bibliotecas
+#include <stdio.h>
+
+// Código de erro
+int error(void) {
+  // Variáveis importantes
+  int A;
+  printf("\fDigite um número de 1 a 12\n");
+  scanf("%i", &A);
+  switch (A) {
+  case 1:
+    printf("\f>\tMês de Janeiro:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério norte)\n");
+    break;
+  case 2:
+    printf("\f>\tMês de Fevereiro:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério norte)\n");
+    break;
+  case 3:
+    printf("\f>\tMês de Março:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério "
+           "norte)\n");
+    break;
+  case 4:
+    printf("\f>\tMês de Abril:\nOutono (no hemisfério sul) / Primavera (no "
+           "hemisfério norte)\n");
+    break;
+  case 5:
+    printf("\f>\tMês de Maio:\nOutono (no hemisfério sul) / Primavera (no "
+           "hemisfério norte)\n");
+    break;
+  case 6:
+    printf("\f>\tMês de Junho:\nInverno (no hemisfério sul) / Verão (no "
+           "hemisfério "
+           "norte)\n");
+    break;
+  case 7:
+    printf("\f>\tMês de Julho:\nInverno (no hemisfério sul) / Verão (no "
+           "hemisfério "
+           "norte)\n");
+    break;
+  case 8:
+    printf("\f>\tMês de Agosto:\nInverno (no hemisfério sul) / Verão (no "
+           "hemisfério norte)\n");
+    break;
+  case 9:
+    printf("\f>\tMês de Setembro:\nPrimavera (no hemisfério sul) / Outono (no "
+           "hemisfério norte)\n");
+    break;
+  case 10:
+    printf("\f>\tMês de Outubro:\nPrimavera (no hemisfério sul) / Outono (no "
+           "hemisfério norte)\n");
+    break;
+  case 11:
+    printf("\f>\tMês de Novembro:\nPrimavera (no hemisfério sul) / Outono (no "
+           "hemisfério norte)\n");
+    break;
+  case 12:
+    printf("\f>\tMês de Dezembro:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério norte)\n");
+    break;
+  default: // Se o valor digitado for != de 1 a 12
+    printf("Error | O valor digitado não corresponde a nenhum mês.\n");
+    error();
+  }
+  return 0;
+}
+
+// Código principal
+int main(void) {
+
+  printf("\t\tExercício 1: f)\n");
+  printf("\tVerificador de estações do ano\n");
+
+  // Variáveis importantes
+  int A;
+  printf("\fDigite um número de 1 a 12\n");
+  scanf("%i", &A);
+  switch (A) {
+  case 1:
+    printf("\f>\tMês de Janeiro:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério norte)\n");
+    break;
+  case 2:
+    printf("\f>\tMês de Fevereiro:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério norte)\n");
+    break;
+  case 3:
+    printf("\f>\tMês de Março:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério "
+           "norte)\n");
+    break;
+  case 4:
+    printf("\f>\tMês de Abril:\nOutono (no hemisfério sul) / Primavera (no "
+           "hemisfério norte)\n");
+    break;
+  case 5:
+    printf("\f>\tMês de Maio:\nOutono (no hemisfério sul) / Primavera (no "
+           "hemisfério norte)\n");
+    break;
+  case 6:
+    printf("\f>\tMês de Junho:\nInverno (no hemisfério sul) / Verão (no "
+           "hemisfério "
+           "norte)\n");
+    break;
+  case 7:
+    printf("\f>\tMês de Julho:\nInverno (no hemisfério sul) / Verão (no "
+           "hemisfério "
+           "norte)\n");
+    break;
+  case 8:
+    printf("\f>\tMês de Agosto:\nInverno (no hemisfério sul) / Verão (no "
+           "hemisfério norte)\n");
+    break;
+  case 9:
+    printf("\f>\tMês de Setembro:\nPrimavera (no hemisfério sul) / Outono (no "
+           "hemisfério norte)\n");
+    break;
+  case 10:
+    printf("\f>\tMês de Outubro:\nPrimavera (no hemisfério sul) / Outono (no "
+           "hemisfério norte)\n");
+    break;
+  case 11:
+    printf("\f>\tMês de Novembro:\nPrimavera (no hemisfério sul) / Outono (no "
+           "hemisfério norte)\n");
+    break;
+  case 12:
+    printf("\f>\tMês de Dezembro:\nVerão (no hemisfério sul) / Inverno (no "
+           "hemisfério norte)\n");
+    break;
+  default: // Se o valor digitado for != de 1 a 12
+    printf("Error | O valor digitado não corresponde a nenhum mês.\n");
+    error();
+  }
+  return 0;
+}
