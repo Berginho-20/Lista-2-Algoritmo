@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+  int a, n, r, an;
+  printf("Escreva o primeiro valor da P.A:\n");
+  scanf("%i", &a);
+  printf("Agora escreva a razão da P.A:\n");
+  scanf("%i", &r);
+  printf("Agora escreva o termo N que você deseja:\n");
+  scanf("%i", &n);
+  an = a + r*(n-1);
+  printf("O enésimo termo da P.A é: %i", an);
+  return 0;
+  }
+
