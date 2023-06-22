@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  int a, b, c, delta, x1,x2;
+  printf("Escreva o coeficiente 'a' da equação\n");
+  scanf("%i", &a);
+  printf("Escreva o coeficiente 'b' da equação\n");
+  scanf("%i", &b);
+  printf("Escreva o coeficiente 'c' da equação\n");
+  scanf("%i", &c);
+    delta = (b*b) - 4*a*c;
+    x1 = (-(b) + sqrt(delta))/2*a;
+    x2 = (-(b) - sqrt(delta))/2*a;
+    if (delta > 0){
+      printf("As duas raízes possíveis para o 'x' são: %i e %i", x1, x2);
+    }else if (delta == 0){
+      printf("A única raíz possível é: %i", x1);
+    } else {
+      printf("Não existe raíz real");
+    }
+  return 0;
+}
