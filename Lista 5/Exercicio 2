@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int input, n6, n5, n4, n3, n2, n1;
+    
+    printf("Insira um numero em binario: ");
+    scanf("%d", &input);
+
+    n6 = (input / 100000); 
+    n5 = (input - n6*100000) / 10000; 
+    n4 = (input - (n6*100000 + n5*10000)) / 1000; 
+    n3 = (input - (n6*100000 + n5*10000 + n4*1000)) / 100; 
+    n2 = (input - (n6*100000 + n5*10000 + n4*1000 + n3*100)) / 10; 
+    n1 = (input - (n6*100000 + n5*10000 + n4*1000 + n3*100 + n2*10)) / 1; 
+
+    printf("%d\n\n", n6 * (2*2*2*2*2) + n5 * (2*2*2*2) + n4 * (2*2*2) + n3 * (2*2) + n2 * 2 + n1);       
+
+return 0;
+}
