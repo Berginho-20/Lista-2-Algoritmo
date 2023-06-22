@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+  int altura, largura, area, tinta, lata;
+  printf("Qual a largura da parede que vai ser pintada?\n");
+  scanf("%i", &largura);
+  printf("Qual a altura da parede que vai ser pintada?\n");
+  scanf("%i", &altura);
+  if (largura <= 0 || altura <= 0){
+    printf("O valor da altura ou largura da parede está inválida");
+  } else {
+    area = largura * altura;
+    tinta = area * 300;
+    lata = (tinta/1000)/2;
+    printf("A quantidade de latas necessárias para pitnar a parede é de: %i latas", lata);
+  }
+  
+  return 0;
+}
