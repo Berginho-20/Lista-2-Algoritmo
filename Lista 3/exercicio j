@@ -1,0 +1,62 @@
+// Carregando bibliotecas
+#include <stdio.h>
+#include <string.h>
+
+// Código principal
+int main(void)
+{
+  printf("\t\tExercício 1: j");
+  printf("\n\tCálculo de salário de funcionários");
+
+  // VariÃ¡veis importantes
+  char nome[61];
+  float salarioBruto, salarioLiquido, numDependentes, descontoINSS;
+
+  // Nome
+  printf("\n\fDigite o nome do funcionário: \n");
+  scanf("%s", &nome[61]);
+  // Salário bruto
+  printf("\n\fDigite o valor do salário bruto:\n");
+  scanf("%f", &salarioBruto);
+  if (salarioBruto <= 0)
+  { // Se der ruim:
+    while (salarioBruto <= 0)
+    {
+      printf("\n\fDigite o valor do salário bruto:\n");
+      scanf("%f", &salarioBruto);
+    }
+  }
+  // Número de dependentes
+  printf("\n\fDigite o número de dependentes:\n");
+  scanf("%f", &numDependentes);
+  if (numDependentes < 0)
+  { // Se der ruim:
+    {
+      printf("\n\fDigite o número de dependentes:\n");
+      scanf("%f", &numDependentes);
+    }
+  }
+
+  // Cálculos
+  if (salarioBruto <= 500)
+  {
+    descontoINSS = salarioBruto * 0.07;
+  }
+  else if (salarioBruto >= 501 && salarioBruto <= 900)
+  {
+    descontoINSS = salarioBruto * 0.09;
+  }
+  else if (salarioBruto > 900)
+  {
+    descontoINSS = salarioBruto * 0.11;
+  }
+  salarioLiquido =
+      (salarioBruto - descontoINSS) + (15 * numDependentes) + 40 + 100;
+
+  // Resultado
+  printf("\n\fO funcionário %s tem o salário líquido de: R$%.2f", nome,
+         salarioLiquido);
+  printf("\n\fSendo que:\n> R$%.2f é de salário real.\n> R$100.00 é de auxílio alimentação.\n> R$40.00 é de auxílio transporte.", (salarioBruto - descontoINSS) + (15 * numDependentes));
+
+  return 0;
+}
