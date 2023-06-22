@@ -1,0 +1,96 @@
+// Carregando bibliotecas
+#include <stdio.h>
+#include <string.h>
+
+// Código de erro
+int error(void) {
+  printf("\nDigite os dados novamente!\n\f");
+
+  // Variáveis importantes
+  char name[50];
+  int idade, calc;
+  // NOME
+  printf("Digite seu nome:\n");
+  scanf("%s", name);
+  // IDADE
+  printf("\nDigite sua idade:\n");
+  scanf("%d", &idade);
+  // Verificando idade
+  if (idade <= 0) {
+    printf("\n\fA idade digitada está incorreta");
+    return error();
+  }
+  if (idade < 5 && idade > 0) {
+    printf("\n\fA idade mínima para se inscrever é 5 anos.");
+    return error();
+  }
+  if (idade >= 75) {
+    printf("Não é permitido maiores de 75 anos.");
+    return error();
+  }
+  // Depois de verificada executamos o código
+  if (idade >= 5 && idade <= 7) { // infantil
+    printf("\nNadador %s:\nCadastrado em: Categoria Infantil A", name);
+  }
+  if (idade >= 8 && idade <= 10) {
+    printf("\nNadador %s:\nCadastrado em: Categoria Infantil B", name);
+  }
+  if (idade >= 11 && idade <= 13) {
+    printf("\nNadador %s:\nCadastrado em: Categoria Juvenil A", name);
+  }
+  if (idade >= 14 && idade <= 17) {
+    printf("\nNadador %s:\nCadastrado em: Categoria Juvenil B", name);
+  }
+  if (idade >= 18 && idade < 75) {
+    printf("\nNadador %s:\nCadastrado em: Categoria adulto", name);
+  }
+
+  return 0;
+}
+
+// Código principal
+int main(void) {
+  printf("\t\tExercício 1: i)\n");
+  printf("\tRegistro campeonato de natação:\n");
+
+  // Variáveis importantes
+  char name[50];
+  int idade, calc;
+  // NOME
+  printf("Digite seu nome:\n");
+  scanf("%s", name);
+  // IDADE
+  printf("\nDigite sua idade:\n");
+  scanf("%d", &idade);
+  // Verificando idade
+  if (idade <= 0) {
+    printf("\n\fA idade digitada está incorreta");
+    return error();
+  }
+  if (idade < 5 && idade > 0) {
+    printf("\n\fA idade mínima para se inscrever é 5 anos.");
+    return error();
+  }
+  if (idade >= 75) {
+    printf("Não é permitido maiores de 75 anos.");
+    return error();
+  }
+  // Depois de verificada executamos o código
+  if (idade >= 5 && idade <= 7) { // infantil
+    printf("\nNadador %s:\nCadastrado em: Categoria Infantil A", name);
+  }
+  if (idade >= 8 && idade <= 10) {
+    printf("\nNadador %s:\nCadastrado em: Categoria Infantil B", name);
+  }
+  if (idade >= 11 && idade <= 13) {
+    printf("\nNadador %s:\nCadastrado em: Categoria Juvenil A", name);
+  }
+  if (idade >= 14 && idade <= 17) {
+    printf("\nNadador %s:\nCadastrado em: Categoria Juvenil B", name);
+  }
+  if (idade >= 18 && idade < 75) {
+    printf("\nNadador %s:\nCadastrado em: Categoria adulto", name);
+  }
+
+  return 0;
+}
