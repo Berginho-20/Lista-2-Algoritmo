@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int input;
+    char output[5];
+
+    printf("\t\tExercicio 1\n\n");
+
+    printf("Insira um numero inteiro: ");
+    scanf("%d", &input);
+
+    if(input / 8 % 2 == 0){
+        strcat(output, "0");
+    } else {
+        strcat(output, "1");
+    }
+    
+    if(input / 4 % 2 == 0){
+        strcat(output, "0");
+    } else {
+        strcat(output, "1");
+    }
+
+    if(input / 2 % 2 == 0){
+        strcat(output, "0");
+    } else {
+        strcat(output, "1");
+    }
+
+    if(input % 2 == 0){
+        strcat(output, "0");
+    } else {
+        strcat(output, "1");
+    }
+
+    printf("\n%d em binario é %d\n\n", input, atoi(output));
+
+return 0;
+}
