@@ -1,0 +1,61 @@
+// Carregando bibliotecas
+#include <stdio.h>
+
+// Código de erro
+int error(void) {
+  printf("Você não pode usar um número negativo para se referir a um ano!\n");
+
+  // Variáveis importantes
+  int respAno, Div1, Div2;
+
+  printf("\fDigite algum ano novamente: ");
+  scanf("%d", &respAno);
+
+  // Verificando se a resposta é < 0
+  if (respAno < 0) {
+    error();
+  }
+  // Verificação se é ano bisiesto
+  Div1 = respAno % 4;
+  Div2 = respAno % 100;
+
+  if (respAno == 0) {
+    printf("Pela lógica o ano 0 é biscesto!");
+  } else if (Div1 == 0 || Div2 == 0) {
+    printf("Ano Bisiesto!");
+  } else {
+    printf("O ano não é bisiesto!");
+  }
+
+  return 0;
+}
+
+// Código principal
+int main(void) {
+  printf("\t\tExercício 1: g)\n");
+  printf("\tVerificador de anos bisiestos\n");
+
+  // Variáveis importantes
+  int respAno, Div1, Div2;
+
+  printf("\fDigite algum ano: ");
+  scanf("%d", &respAno);
+
+  // Verificando se a resposta é < 0
+  if (respAno < 0) {
+    error();
+  }
+  // Verificação se é ano bisiesto
+  Div1 = respAno % 4;
+  Div2 = respAno % 100;
+
+  if (respAno == 0) {
+    printf("Pela lógica o ano 0 é biscesto!");
+  } else if (Div1 == 0 || Div2 == 0) {
+    printf("Ano Bisiesto!");
+  } else {
+    printf("O ano não é bisiesto!");
+  }
+
+  return 0;
+}
