@@ -1,0 +1,79 @@
+// Carregando bibliotecas
+#include <stdio.h>
+
+// Código de negrito
+void bold(int status) {
+  static const char *seq[] = {"\x1b[0m", "\x1b[1m"};
+  printf("%s", seq[!!status]);
+}
+
+// Código principal
+int main(void) {
+  bold(1000);
+  printf("\t\tExercicio 1: k)\n");
+  printf("\n\tLanchonete do Lutercio");
+
+  // Variáveis
+  float valorQuant100, valorQuant101, valorQuant102, valorQuant103,
+      valorQuant104, valorQuant105, valorTotal;
+  int codigoItens, quantItens, novoItem;
+
+  // Printando cardápio
+  bold(800);
+  printf("\n\fEspecificacao  \t Codigo\t\t Preco");
+  bold(0);
+  printf("\nMisto quente \t\t 100 \t\t R$1.20\nCachorro quente \t 101  \t\t "
+         "R$1.30\nBauru \t\t\t 102 \t\t R$1.50\nHambuguer \t\t 103 \t\t "
+         "R$1.20\nCheeseburguer \t\t 104 \t\t R$1.30\nRefrigerante \t\t 105 "
+         "\t\t R$1.00");
+
+  // Código
+  printf("\n\nDigite o codigo do seu lanche:\n");
+  scanf("%d", &codigoItens);
+  if (codigoItens != 100 && codigoItens != 101 && codigoItens != 102 &&
+      codigoItens != 103 && codigoItens != 104 && codigoItens != 105) {
+    while (codigoItens != 100 && codigoItens != 101 && codigoItens != 102 &&
+           codigoItens != 103 && codigoItens != 104 && codigoItens != 105) {
+      printf("\n\nDigite o código do seu lanche:\n");
+      scanf("%d", &codigoItens);
+    }
+  }
+  // Quantidade
+  printf("\n\nDigite a quantidade:\n");
+  scanf("%d", &quantItens);
+  if (quantItens <= 0) {
+    while (quantItens <= 0) {
+      printf("\n\nDigite a quantidade:\n");
+      scanf("%d", &quantItens);
+    }
+  }
+	
+  // Condição
+  switch (codigoItens) {
+  case 100:
+    valorQuant100 = 1.20 * quantItens;
+    break;
+  case 101:
+    valorQuant101 = 1.30 * quantItens;
+    break;
+  case 102:
+    valorQuant102 = 1.50 * quantItens;
+    break;
+  case 103:
+    valorQuant103 = 1.20 * quantItens;
+    break;
+  case 104:
+    valorQuant104 = 1.30 * quantItens;
+    break;
+  case 105:
+    valorQuant105 = 1 * quantItens;
+    break;
+  }
+
+  // Total
+  valorTotal = valorQuant100 + valorQuant101 + valorQuant102 + valorQuant103 +
+               valorQuant104 + valorQuant105;
+  printf("\fO valor total da sua compra foi de: R$%.2f", valorTotal);
+
+  return 0;
+}
