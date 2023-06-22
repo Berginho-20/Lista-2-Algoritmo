@@ -6,8 +6,6 @@ int main(){
     int input;
     char output[5];
 
-    printf("\t\tExercicio 1\n\n");
-
     printf("Insira um numero inteiro: ");
     scanf("%d", &input);
 
