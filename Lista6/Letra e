@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+
+int
+main ()
+{
+  float n1, x = 0, i = 0, a, b = 0, c = 0, p1, p2;
+
+
+  while (1)
+    {
+      printf ("digite o valor de n1: ");
+      scanf ("%f", &n1);
+      //i++;
+      if (n1 == 0)
+	{
+	  break;
+	}
+
+      
+      x = x + n1;
+
+
+      if (n1 > 0)
+	{
+	  i = i + 1;
+	  b = b + 1;
+	  
+	}
+      else if (n1 < 0)
+	{
+	  i = i + 1;
+	  c = c + 1;
+	}
+
+    }
+  p1 = (b * 100) / i;
+  p2 = (c * 100) / i;
+   
+  a = x / i;
+  printf("a media: %.2f\na quantidade de positivos: %.0f\na quantidade de negativos: %.0f\npercentual de positivos: %.0f\npercentual de negativos: %.0f",
+     a, b, c, p1, p2);
+
+
+
+  return 0;
+}
