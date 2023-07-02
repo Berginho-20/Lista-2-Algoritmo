@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n1, n2, i = 0;
+    float p;
+    printf("digite o valor de n1: ");
+    scanf("%d", &n1);
+    printf("digite o valor de n2: ");
+    scanf("%d", &n2);
+    
+    if (n1 > 0 && n2 > 0){
+    while(i == 0){
+        p = (double) pow(n1, n2);
+        printf("A potenciação de %i por %i é: %.0f", n1, n2,p);
+        i++;
+       }
+    }
+    else{
+        printf("um dos numeros foi invalido");
+    }
+    
+    return 0;
+}		
