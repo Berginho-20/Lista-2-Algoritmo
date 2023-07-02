@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+
+
+int main (){
+  float n1,n2, x = 0, i = 0, a, b , c = 0, m, d = 0, p, maior=0,y=0;
+
+
+  while (1)
+    {
+      printf ("digite o salário: ");
+      scanf ("%f", &n1);
+      //i++;
+      if (n1 < 0)
+	{
+	  break;
+	}
+	
+      
+      x = x + n1;
+
+    if (n1>maior){
+        maior = n1;
+        i++; 
+    }
+         
+    
+      if(n1 < 100){
+          d = d + 1;
+          i++; 
+      }
+     
+
+    }
+  while (1)
+    {
+      printf ("digite o número de filho: ");
+      scanf ("%f", &n2);
+      //i++;
+      if (n2 < 0)
+	{
+	  break;
+	}
+	y++;
+	c = c + n2;
+    }
+    
+  
+  // printf("%f",c);
+  a = x / i;//salario
+  b = c/ y;//filhos
+  p = (d*100)/i;//percentual de salarios ate 100
+  
+  printf("a media de salario: %.2f\na media de filhos: %.2f\nmaior salario: %.2f\npercentual de salarios ate 100: %.2f\n", a, b, maior, p);
+
+
+  return 0;
+}
+
