@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+  float res=0, soma_num=1, soma_div=1, div_inicial=1, div, numerador=1;
+  printf("\n Digite o divisor maximo: ");
+  scanf("%f", &div);
+  if(div > 0){
+    while(div_inicial <= div){
+      res = res + (numerador/div_inicial);
+      numerador = numerador + 2;
+      div_inicial = div_inicial + 1;
+    }
+    printf("\n Esse e o resultado: %.2f", res);
+  }else{
+    printf("\n Valor invalido.");
+  }
+  
+  return 0;
+}
