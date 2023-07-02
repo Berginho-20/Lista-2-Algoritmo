@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    float n, i = 1, a = 0, x = 1; 
+    printf("Escreva o fatorial desejado:");
+    scanf("%f",&n);
+    if (n > 5){
+        while (i <= n){
+         x = x * i;
+         a = a + x;
+         i++;
+    }
+    printf("O resultado dá: 1/ %.1f", a);
+    }
+    return 0;
+}
