@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int idade, i, m = 0;
+    
+    for(i=1; i <=5; i++)
+    {
+        printf("Coloque uma idade aqui:");
+        scanf("%d",&idade);
+        if (idade >= 18){
+            m++;
+        }
+    }
+    printf("A quantidade de pessoas com 18 anos ou mais é: %d", m);
+    return 0;
+}
+
