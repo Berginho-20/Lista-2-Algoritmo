@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int trans, vis, tipo, pra, tvista, comprav, prest, total, comprap, tprazo;
+    
+    
+    printf("Diga o numero de transações:");
+    scanf("%d", &trans);
+    
+    for(trans; trans > 0; trans--){
+        printf("Escolha o tipo de transação: 1 - Á vista / 2 - Á prazo");
+        scanf("%d", &tipo);
+        if (tipo == 1){
+            printf("Qual o valor da compra?");
+            scanf("%d", &comprav);
+            tvista = tvista + comprav;
+        } else if (tipo == 2){
+            printf("Qual o valor da compra?");
+            scanf("%d", &comprap);
+            tprazo = tprazo + comprap;
+        } else {
+            printf("codigo invalido");
+            trans++;
+        }
+        prest = tprazo/3;
+        total = tprazo + tvista;
+        }
+
+    printf("Total de compras: %d, O valor total das compras à vista: %d, O valor total das compras a prazo: %d, O valor da primeira prestação das compras a prazo: %d", total, tvista, tprazo, prest);
+    
+    return 0;
+}
