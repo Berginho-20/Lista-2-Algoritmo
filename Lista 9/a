@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define TAM 5
+
+int main(void) {
+  int vet[TAM], x, y, i, contx = 0, conty = 0, soma;
+  for (i = 0; i < TAM; i++){
+    printf("\nvet[%d} = ", i);
+    scanf("%d", &vet[i]);
+  }
+  do{
+    printf("Escolha uma posição do vetor:");
+    scanf("%d", &x);
+  }while(x < 0 || x >= TAM);
+   do{
+    printf("Escolha uma outra posição do vetor:");
+    scanf("%d", &y);
+    }while(y < 0 || y >= TAM);
+  for (i = 0; i < TAM ; i++) {
+      if (x == i){
+    contx =  contx + vet[i];}
+      if( y == i){
+    conty = vet[i];}
+    }
+  soma = conty + contx;
+  printf("A soma dos valores das posições ditas é: %d", soma);
+  return 0;
+}
