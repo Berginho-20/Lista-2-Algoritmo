@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(){
+    int mat[6][6], i, j, menor;
+    printf("\nDigite os numeros para uma matriz 6x6.\n");
+    for(i=1;i<=6;i++){
+        printf("\n");
+        for(j=1;j<=6;j++){
+            printf("Matriz[%d][%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    menor = mat[1][4];
+    for(i=1;i<=6;i++){
+        printf("\n");
+        for(j=1;j<=6;j++){
+            if(((i==1 && j==6) || (i==2 && j==5) || (i==3 && j==4) || (i==4 && j==3) || (i==5 && j==2) || (i==6 && j==1)) && mat[i][j] < menor){
+                menor = mat[i][j];
+            }
+            printf("\t%d", mat[i][j]);
+        }
+    }
+    printf("\n\nO menor numero da diagonal secundaria e: %d", menor);
+    return 0;
+}
