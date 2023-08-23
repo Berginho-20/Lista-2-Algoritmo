@@ -1,0 +1,35 @@
+#include <stdio.h>
+#define lin 5
+#define col 5
+int main(){
+	int mat[lin][col], i, j, somal4=0, somac2=0, somad=0, somatot=0;
+	printf("Digite os valores de uma matriz 5x5 e sera mostrado algumas informacoes sobre ela.");
+	for(i=0;i<lin;i++){
+       	for(j=0;j<col;j++){
+        	printf("\nmatriz[%d][%d] = ", i+1,j+1);
+            scanf("%d", &mat[i][j]);
+            somatot = somatot + mat[i][j];
+            if(i==3){
+            	somal4 = somal4 + mat[i][j];
+			}
+			if(j==1){
+            	somac2 = somac2 + mat[i][j];
+			}
+            if(i==j){
+            	somad = somad + mat[i][j];
+			}
+       	}
+	}
+	for(i=0;i<lin;i++){
+        printf("\n");
+        for(j=0;j<col;j++){
+            printf("\t%d ", mat[i][j]);
+        }
+    }
+    printf("\n\n");
+    printf("Soma dos valores da linha 4: %d", somal4);
+    printf("\nSoma dos valores da coluna 2: %d", somac2);
+    printf("\nSoma dos valores da diagonal principal: %d", somad);
+    printf("\nSoma total: %d", somatot);
+  return 0;
+}
