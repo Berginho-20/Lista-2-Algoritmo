@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define TAM 15
+
+int main(void) {
+  int vet[TAM], x, qtd = 0, menor = 0, i;
+  printf("Diigte um valor referência:");
+  scanf("%d", &x);
+  for (i = 0; i < TAM; i++){
+    printf("\nvet[%d} = ", i);
+    scanf("%d", &vet[i]);
+    if (x > vet[i]){
+      menor++;
+    } else if (x == vet[i]) {
+      qtd++;}
+  
+  }
+  for (i = 0; i < TAM; i++){
+    if (x < vet[i]) {
+      printf("\nValores maiores que %d : %d", x, vet[i]);}
+  }
+  
+  printf("\nA quantidade de números menores que %d no vetor é: %d", x, menor);
+  printf("\nA quantidade de números iguais a %d no vetor é: %d", x, qtd);
+  return 0;
+}
