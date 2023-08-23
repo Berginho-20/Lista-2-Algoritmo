@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    int mat[4][4], i, j, maior, igual, menor;
+    printf("\nA matriz resultante e:");
+    for(i=1;i<=4;i++){
+        printf("\n");
+        for(j=1;j<=4;j++){
+            if(i<j){
+                menor = (2*i)+(7*j)-2;
+                printf("\t%d", menor);
+            }else if(i==j){
+                igual = (3*i)-1;
+                printf("\t%d", igual);
+            }else{
+                maior = (4*i)-(5*j*2);
+                printf("\t%d", maior);
+            }
+        }
+    }
+    return 0;
+}
