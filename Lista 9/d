@@ -1,0 +1,18 @@
+#include <stdio.h>
+#define TAM 5
+
+int main(void) {
+  int vetx[TAM], vety[TAM], x, y = 0, i;
+  for (i = 0; i < TAM; i++){
+    printf("\nvetx[%d} = ", i);
+    scanf("%d", &vetx[i]); 
+  }
+  printf("\n*****************************************\n");
+  for (i = 0; i < TAM; i++){
+     printf("\nvety[%d} = ", i);
+     scanf("%d", &vety[i]); 
+      y = y + (vetx[i] * vety[i]);
+  }
+  printf ("O produto escalar desses vetores é: %d", y);
+  return 0;
+}
