@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	int senha=1, opcoes[7]={0, 0, 0, 0, 0, 0, 0}, nvotos=0, voto;
+	do{
+	printf("Elabore uma senha para encerrar o programa: ");
+	scanf("%d", &senha);
+	if(senha>=0 && senha<=5){
+	    printf("Digite uma senha diferente das opcoes de voto.\n");
+	}
+	}while(senha>=0 && senha<=5);
+	system("cls");
+	do{
+		printf("---------- Eleicao ----------\n");
+	    printf("Digite qual o seu voto?\n(Candidato A = 1 / Candidato B = 2 / Candidato C = 3 / Candidato D = 4 / Candidato E = 5 / votar Branco = 0)\n");
+	    scanf("%d", &voto);
+	    if(voto>=0 && voto<=5){
+	        opcoes[voto]++;
+	        nvotos++;
+	    }else if(voto<0){
+	        printf("Digite um voto valido. Tente novamente.\n");
+	        system("pause");
+	    }else if(voto>5 && voto!=senha){
+	        opcoes[6]++;
+	        nvotos++;
+	    }
+		system("cls");
+	}while(voto!=senha);
+	printf("---------- Apuracao dos votos ----------\nO numero de votos registrados foram: %d\nCandidato A: %d\nCandidato B: %d\nCandidato C: %d\nCandidato D: %d\nCandidato E: %d\nVotos Brancos: %d\nVotos nulos: %d", nvotos,opcoes[1], opcoes[2], opcoes[3], opcoes[4], opcoes[5], opcoes[0], opcoes[6]);
+	return 0;
+}
