@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+    int mat[3][3], i, j, a;
+    printf("Digite os valores de uma matriz 3x3 e depois um valor qualquer que sera muliplicado pelos\nvalores da matriz e sera mostrado a matriz resultante.\n");
+    for(i=0;i<=2;i++){
+        for(j=0;j<=2;j++){
+            printf("Matriz[%d][%d]: ", i+1, j+1);
+            scanf("%d", &mat[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nA matriz construida ficou da seguinte forma:");
+    for(i=0;i<=2;i++){
+        printf("\n");
+        for(j=0;j<=2;j++){
+            printf("\t%d ", mat[i][j]);
+        }
+    }
+    printf("\n\nAgora digite um valor que sera multiplica pelos valores da matriz: ");
+    scanf("%d", &a);
+    printf("\nA matriz resultante ficou da seguinte forma:");
+    for(i=0;i<=2;i++){
+        printf("\n");
+        for(j=0;j<=2;j++){
+            printf("\t%d ", mat[i][j]*a);
+        }
+    }
+    return 0;
+}
