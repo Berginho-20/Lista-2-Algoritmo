@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define TAM 20
+
+int main(void) {
+  int vet[TAM], x, qtd = 0, i;
+  printf("Diigte um valor referência: ");
+  scanf("%d", &x);
+  for (i = 0; i < TAM; i++){
+    printf("\nvet[%d} = ", i);
+    scanf("%d", &vet[i]);
+  }
+  printf("\nO %d está nas posições: ", x);
+  for (i = 0; i < TAM; i++){
+    if (vet[i] == x){
+      printf("\nvet[%d]", i);
+      qtd++;
+    }
+  }
+  if (qtd == 0){
+    printf("O valor referência não está no vetor");
+  }
+  
+  return 0;
+}
