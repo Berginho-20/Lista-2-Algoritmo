@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define TAM 10
+
+int main(void) {
+  int vet[TAM], x, y = TAM - 1, i;
+  for (i = 0; i < TAM; i++){
+    printf("\nvet[%d} = ", i);
+    scanf("%d", &vet[i]);
+  }
+  for (i = y; y >= 0 ; y--) {
+     printf("\n%d", vet[y]);
+    }
+  return 0;
+}
