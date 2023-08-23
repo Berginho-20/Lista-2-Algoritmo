@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+    int mat[6][6], i, j, soma=0;
+    printf("\nDigite os numeros para uma matriz 6x6.\n");
+    for(i=1;i<=6;i++){
+        printf("\n");
+        for(j=1;j<=6;j++){
+            printf("Matriz[%d][%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    for(i=1;i<=6;i++){
+        for(j=1;j<=6;j++){
+            if(i==j && i!=1){
+                soma = soma + mat[i-1][j];
+            }else if(i==j && i==1){
+                soma = soma + mat[4][1];
+            }
+        }
+    }
+    for(i=1;i<=6;i++){
+        printf("\n");
+        for(j=1;j<=6;j++){
+            printf("\t%d", mat[i][j]);
+        }
+    }
+    printf("\n\nA soma dos numeros da diagonal principal(%d+%d+%d+%d): %d", mat[4][1], mat[1][2], mat[2][3], mat[3][4], soma);
+    return 0;
+}
